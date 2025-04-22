@@ -35,10 +35,10 @@ app.get('/api/logs/feeding-reports', (req, res) => {
   sendMock(res, 'feeding-reports', mode, 1000);
 });
 
-// Puedes repetir para otros endpoints si deseas:
-app.get('/api/device/status', (req, res) => {
+// return this._http.get<any>('http://localhost:3001/api/logs/general-reports?mode=success');
+app.get('/api/logs/general-reports', (req, res) => {
   const mode = req.query.mode || 'success';
-  sendMock(res, 'device-status', mode);
+  sendMock(res, 'general-reports', mode);
 });
 
 app.listen(port, () => {
